@@ -1,0 +1,7 @@
+product_version,release_date,release_notes,change_logs,feature_updates
+v1.0,2024-09-01,Initial public release of the e-commerce platform.,"Core shopping flow, user authentication, basic checkout enabled.","Product browsing, cart creation, standard checkout."
+v1.1,2024-09-15,Minor performance improvements and UI fixes.,"Optimized search queries, fixed UI glitches on mobile.","Faster search results, smoother product listing."
+v1.2,2024-09-30,Checkout and payment system enhancements.,"Updated payment gateway, improved error handling.","More reliable payments, better failure messages."
+v2.0,2024-10-15,Major update introducing order tracking and refunds.,"Added order tracking module, integrated refund workflows.","Real-time order tracking, refund request support."
+v2.1,2024-11-01,Stability improvements after v2.0 rollout.,"Fixed crashes during checkout, optimized cart handling.","Improved app stability, fewer cart-related issues."
+v3.0,2024-11-20,Search and recommendation system upgrade.,"Refactored search ranking logic, updated recommendation engine.","More relevant search results, personalized recommendations."

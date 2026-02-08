@@ -1,0 +1,301 @@
+resolution_id,related_complaint_id,issue_type,resolution_notes,resolution_status,resolved_date
+RES-3001,ECOM-2168,Payment Failure,Fixed payment gateway configuration,Escalated,2024-10-11
+RES-3002,ECOM-2460,App Crash,Improved error handling logic,Resolved,2024-09-13
+RES-3003,ECOM-2224,Refund Issue,Optimized database query,Partially Resolved,2024-11-21
+RES-3004,ECOM-2494,Refund Issue,Restarted notification service,Partially Resolved,2024-09-23
+RES-3005,ECOM-2428,Cart Issue,Hotfix released for cart module,Resolved,2024-11-27
+RES-3006,ECOM-2139,Delivery Delay,Optimized database query,Escalated,2024-10-03
+RES-3007,ECOM-2309,Delivery Delay,Fixed payment gateway configuration,Partially Resolved,2024-10-22
+RES-3008,ECOM-2073,App Crash,Cleared cache and session handling bug,Partially Resolved,2024-11-04
+RES-3009,ECOM-2191,App Crash,Improved error handling logic,Resolved,2024-11-22
+RES-3010,ECOM-2492,Cart Issue,Optimized database query,Escalated,2024-11-13
+RES-3011,ECOM-2151,Refund Issue,Fixed payment gateway configuration,Partially Resolved,2024-09-28
+RES-3012,ECOM-2452,App Crash,Hotfix released for cart module,Resolved,2024-10-04
+RES-3013,ECOM-2410,Delivery Delay,Improved error handling logic,Escalated,2024-09-11
+RES-3014,ECOM-2233,Cart Issue,Patched mobile crash issue,Escalated,2024-11-30
+RES-3015,ECOM-2317,Payment Failure,Hotfix released for cart module,Resolved,2024-11-18
+RES-3016,ECOM-2163,Search & Filter Issue,Improved error handling logic,Partially Resolved,2024-11-02
+RES-3017,ECOM-2354,Delivery Delay,Cleared cache and session handling bug,Partially Resolved,2024-10-19
+RES-3018,ECOM-2441,App Crash,Patched mobile crash issue,Resolved,2024-11-20
+RES-3019,ECOM-2403,Search & Filter Issue,Updated third-party API integration,Partially Resolved,2024-11-03
+RES-3020,ECOM-2223,App Crash,Hotfix released for cart module,Partially Resolved,2024-09-22
+RES-3021,ECOM-2127,App Crash,Cleared cache and session handling bug,Escalated,2024-10-20
+RES-3022,ECOM-2331,Search & Filter Issue,Improved error handling logic,Partially Resolved,2024-11-10
+RES-3023,ECOM-2306,App Crash,Restarted notification service,Resolved,2024-10-10
+RES-3024,ECOM-2413,Refund Issue,Updated third-party API integration,Resolved,2024-09-19
+RES-3025,ECOM-2209,Refund Issue,Optimized database query,Escalated,2024-10-09
+RES-3026,ECOM-2206,Payment Failure,Cleared cache and session handling bug,Resolved,2024-09-20
+RES-3027,ECOM-2254,Refund Issue,Improved error handling logic,Resolved,2024-09-08
+RES-3028,ECOM-2215,Refund Issue,Optimized database query,Partially Resolved,2024-09-27
+RES-3029,ECOM-2223,Cart Issue,Hotfix released for cart module,Resolved,2024-09-11
+RES-3030,ECOM-2425,Delivery Delay,Hotfix released for cart module,Partially Resolved,2024-09-11
+RES-3031,ECOM-2014,Payment Failure,Updated third-party API integration,Resolved,2024-11-30
+RES-3032,ECOM-2246,Refund Issue,Fixed payment gateway configuration,Escalated,2024-10-04
+RES-3033,ECOM-2282,App Crash,Rolled back recent deployment,Escalated,2024-09-19
+RES-3034,ECOM-2372,Delivery Delay,Improved error handling logic,Resolved,2024-11-30
+RES-3035,ECOM-2432,App Crash,Restarted notification service,Escalated,2024-11-09
+RES-3036,ECOM-2402,App Crash,Updated third-party API integration,Resolved,2024-09-07
+RES-3037,ECOM-2347,Refund Issue,Updated third-party API integration,Resolved,2024-09-14
+RES-3038,ECOM-2352,Cart Issue,Improved error handling logic,Resolved,2024-10-08
+RES-3039,ECOM-2281,Delivery Delay,Rolled back recent deployment,Partially Resolved,2024-09-11
+RES-3040,ECOM-2352,Refund Issue,Hotfix released for cart module,Partially Resolved,2024-09-26
+RES-3041,ECOM-2500,Delivery Delay,Improved error handling logic,Partially Resolved,2024-11-06
+RES-3042,ECOM-2310,Search & Filter Issue,Patched mobile crash issue,Resolved,2024-11-23
+RES-3043,ECOM-2474,App Crash,Improved error handling logic,Escalated,2024-09-23
+RES-3044,ECOM-2349,App Crash,Hotfix released for cart module,Escalated,2024-09-10
+RES-3045,ECOM-2036,Delivery Delay,Cleared cache and session handling bug,Resolved,2024-10-12
+RES-3046,ECOM-2219,Search & Filter Issue,Hotfix released for cart module,Partially Resolved,2024-10-18
+RES-3047,ECOM-2194,Delivery Delay,Restarted notification service,Resolved,2024-11-20
+RES-3048,ECOM-2307,Payment Failure,Improved error handling logic,Partially Resolved,2024-09-12
+RES-3049,ECOM-2465,App Crash,Improved error handling logic,Partially Resolved,2024-09-27
+RES-3050,ECOM-2203,Cart Issue,Cleared cache and session handling bug,Resolved,2024-09-08
+RES-3051,ECOM-2498,Delivery Delay,Fixed payment gateway configuration,Resolved,2024-09-29
+RES-3052,ECOM-2458,Search & Filter Issue,Hotfix released for cart module,Escalated,2024-10-03
+RES-3053,ECOM-2041,Delivery Delay,Hotfix released for cart module,Escalated,2024-10-06
+RES-3054,ECOM-2285,Search & Filter Issue,Updated third-party API integration,Escalated,2024-09-13
+RES-3055,ECOM-2484,Search & Filter Issue,Patched mobile crash issue,Escalated,2024-09-26
+RES-3056,ECOM-2236,App Crash,Updated third-party API integration,Escalated,2024-11-29
+RES-3057,ECOM-2402,App Crash,Restarted notification service,Resolved,2024-10-05
+RES-3058,ECOM-2300,Delivery Delay,Hotfix released for cart module,Escalated,2024-10-15
+RES-3059,ECOM-2096,Payment Failure,Updated third-party API integration,Escalated,2024-09-24
+RES-3060,ECOM-2201,Cart Issue,Hotfix released for cart module,Escalated,2024-10-03
+RES-3061,ECOM-2208,Refund Issue,Optimized database query,Resolved,2024-11-22
+RES-3062,ECOM-2048,App Crash,Updated third-party API integration,Resolved,2024-10-22
+RES-3063,ECOM-2351,Delivery Delay,Improved error handling logic,Escalated,2024-10-01
+RES-3064,ECOM-2015,Search & Filter Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-21
+RES-3065,ECOM-2143,Delivery Delay,Hotfix released for cart module,Partially Resolved,2024-11-06
+RES-3066,ECOM-2247,Payment Failure,Updated third-party API integration,Escalated,2024-11-26
+RES-3067,ECOM-2161,Payment Failure,Hotfix released for cart module,Resolved,2024-10-08
+RES-3068,ECOM-2476,Search & Filter Issue,Hotfix released for cart module,Partially Resolved,2024-11-16
+RES-3069,ECOM-2363,App Crash,Updated third-party API integration,Partially Resolved,2024-09-18
+RES-3070,ECOM-2266,Refund Issue,Hotfix released for cart module,Partially Resolved,2024-10-13
+RES-3071,ECOM-2473,Search & Filter Issue,Optimized database query,Partially Resolved,2024-09-21
+RES-3072,ECOM-2443,Cart Issue,Cleared cache and session handling bug,Escalated,2024-09-27
+RES-3073,ECOM-2181,Cart Issue,Restarted notification service,Escalated,2024-09-08
+RES-3074,ECOM-2412,Search & Filter Issue,Rolled back recent deployment,Resolved,2024-09-16
+RES-3075,ECOM-2396,Search & Filter Issue,Patched mobile crash issue,Partially Resolved,2024-09-11
+RES-3076,ECOM-2225,App Crash,Updated third-party API integration,Partially Resolved,2024-11-10
+RES-3077,ECOM-2057,Payment Failure,Cleared cache and session handling bug,Resolved,2024-11-21
+RES-3078,ECOM-2178,Payment Failure,Restarted notification service,Resolved,2024-10-12
+RES-3079,ECOM-2004,Search & Filter Issue,Fixed payment gateway configuration,Resolved,2024-11-18
+RES-3080,ECOM-2249,Refund Issue,Rolled back recent deployment,Resolved,2024-10-12
+RES-3081,ECOM-2349,Payment Failure,Cleared cache and session handling bug,Escalated,2024-09-18
+RES-3082,ECOM-2478,Payment Failure,Hotfix released for cart module,Resolved,2024-10-18
+RES-3083,ECOM-2273,Refund Issue,Rolled back recent deployment,Escalated,2024-09-20
+RES-3084,ECOM-2394,Payment Failure,Updated third-party API integration,Partially Resolved,2024-09-29
+RES-3085,ECOM-2015,App Crash,Optimized database query,Resolved,2024-10-15
+RES-3086,ECOM-2162,Payment Failure,Hotfix released for cart module,Resolved,2024-09-12
+RES-3087,ECOM-2391,Search & Filter Issue,Optimized database query,Resolved,2024-10-22
+RES-3088,ECOM-2083,App Crash,Cleared cache and session handling bug,Escalated,2024-09-30
+RES-3089,ECOM-2390,Search & Filter Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-06
+RES-3090,ECOM-2148,Delivery Delay,Optimized database query,Escalated,2024-11-25
+RES-3091,ECOM-2058,Cart Issue,Fixed payment gateway configuration,Escalated,2024-11-25
+RES-3092,ECOM-2030,Cart Issue,Hotfix released for cart module,Partially Resolved,2024-11-09
+RES-3093,ECOM-2145,Cart Issue,Fixed payment gateway configuration,Escalated,2024-11-29
+RES-3094,ECOM-2443,App Crash,Rolled back recent deployment,Partially Resolved,2024-09-21
+RES-3095,ECOM-2292,Search & Filter Issue,Cleared cache and session handling bug,Partially Resolved,2024-09-27
+RES-3096,ECOM-2457,Search & Filter Issue,Hotfix released for cart module,Partially Resolved,2024-09-19
+RES-3097,ECOM-2308,Cart Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-21
+RES-3098,ECOM-2305,Delivery Delay,Rolled back recent deployment,Escalated,2024-11-16
+RES-3099,ECOM-2149,Payment Failure,Rolled back recent deployment,Escalated,2024-11-14
+RES-3100,ECOM-2208,App Crash,Restarted notification service,Resolved,2024-11-20
+RES-3101,ECOM-2384,Refund Issue,Patched mobile crash issue,Resolved,2024-10-12
+RES-3102,ECOM-2291,Cart Issue,Restarted notification service,Resolved,2024-09-12
+RES-3103,ECOM-2078,Search & Filter Issue,Optimized database query,Resolved,2024-11-16
+RES-3104,ECOM-2261,Payment Failure,Restarted notification service,Resolved,2024-11-14
+RES-3105,ECOM-2199,Cart Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-19
+RES-3106,ECOM-2340,Refund Issue,Cleared cache and session handling bug,Resolved,2024-09-25
+RES-3107,ECOM-2407,Refund Issue,Restarted notification service,Resolved,2024-11-17
+RES-3108,ECOM-2341,Delivery Delay,Updated third-party API integration,Resolved,2024-11-02
+RES-3109,ECOM-2317,Refund Issue,Patched mobile crash issue,Resolved,2024-11-13
+RES-3110,ECOM-2059,Refund Issue,Improved error handling logic,Escalated,2024-11-24
+RES-3111,ECOM-2439,Delivery Delay,Optimized database query,Resolved,2024-11-23
+RES-3112,ECOM-2370,Search & Filter Issue,Optimized database query,Partially Resolved,2024-11-06
+RES-3113,ECOM-2369,Refund Issue,Optimized database query,Escalated,2024-09-30
+RES-3114,ECOM-2254,App Crash,Updated third-party API integration,Escalated,2024-11-29
+RES-3115,ECOM-2029,Payment Failure,Rolled back recent deployment,Resolved,2024-09-28
+RES-3116,ECOM-2125,App Crash,Improved error handling logic,Resolved,2024-11-22
+RES-3117,ECOM-2345,Payment Failure,Hotfix released for cart module,Escalated,2024-10-26
+RES-3118,ECOM-2282,Refund Issue,Fixed payment gateway configuration,Partially Resolved,2024-10-30
+RES-3119,ECOM-2253,App Crash,Optimized database query,Partially Resolved,2024-09-28
+RES-3120,ECOM-2077,Cart Issue,Updated third-party API integration,Partially Resolved,2024-09-17
+RES-3121,ECOM-2315,Refund Issue,Hotfix released for cart module,Resolved,2024-11-18
+RES-3122,ECOM-2452,Refund Issue,Restarted notification service,Escalated,2024-09-30
+RES-3123,ECOM-2305,Payment Failure,Updated third-party API integration,Resolved,2024-10-17
+RES-3124,ECOM-2243,Refund Issue,Cleared cache and session handling bug,Escalated,2024-11-18
+RES-3125,ECOM-2084,Delivery Delay,Cleared cache and session handling bug,Escalated,2024-09-11
+RES-3126,ECOM-2114,Refund Issue,Fixed payment gateway configuration,Resolved,2024-11-06
+RES-3127,ECOM-2369,Payment Failure,Updated third-party API integration,Resolved,2024-10-26
+RES-3128,ECOM-2438,App Crash,Hotfix released for cart module,Escalated,2024-11-11
+RES-3129,ECOM-2142,Payment Failure,Restarted notification service,Escalated,2024-09-12
+RES-3130,ECOM-2057,Payment Failure,Optimized database query,Escalated,2024-09-25
+RES-3131,ECOM-2276,App Crash,Rolled back recent deployment,Escalated,2024-11-06
+RES-3132,ECOM-2152,Delivery Delay,Cleared cache and session handling bug,Partially Resolved,2024-09-11
+RES-3133,ECOM-2459,Delivery Delay,Rolled back recent deployment,Partially Resolved,2024-11-18
+RES-3134,ECOM-2246,Refund Issue,Restarted notification service,Escalated,2024-09-14
+RES-3135,ECOM-2385,Search & Filter Issue,Restarted notification service,Partially Resolved,2024-11-12
+RES-3136,ECOM-2435,Delivery Delay,Optimized database query,Resolved,2024-10-30
+RES-3137,ECOM-2204,App Crash,Improved error handling logic,Escalated,2024-11-04
+RES-3138,ECOM-2126,App Crash,Optimized database query,Partially Resolved,2024-09-15
+RES-3139,ECOM-2081,Payment Failure,Restarted notification service,Escalated,2024-09-07
+RES-3140,ECOM-2123,Refund Issue,Rolled back recent deployment,Resolved,2024-10-30
+RES-3141,ECOM-2068,App Crash,Hotfix released for cart module,Escalated,2024-11-13
+RES-3142,ECOM-2110,Refund Issue,Improved error handling logic,Resolved,2024-11-30
+RES-3143,ECOM-2063,Payment Failure,Cleared cache and session handling bug,Escalated,2024-11-08
+RES-3144,ECOM-2264,App Crash,Cleared cache and session handling bug,Resolved,2024-11-06
+RES-3145,ECOM-2493,Payment Failure,Restarted notification service,Escalated,2024-11-27
+RES-3146,ECOM-2315,Payment Failure,Rolled back recent deployment,Resolved,2024-10-07
+RES-3147,ECOM-2245,Search & Filter Issue,Optimized database query,Resolved,2024-11-20
+RES-3148,ECOM-2115,Delivery Delay,Hotfix released for cart module,Partially Resolved,2024-10-03
+RES-3149,ECOM-2044,App Crash,Fixed payment gateway configuration,Partially Resolved,2024-09-24
+RES-3150,ECOM-2048,Delivery Delay,Fixed payment gateway configuration,Escalated,2024-11-23
+RES-3151,ECOM-2333,Cart Issue,Cleared cache and session handling bug,Escalated,2024-11-01
+RES-3152,ECOM-2462,Payment Failure,Hotfix released for cart module,Resolved,2024-09-10
+RES-3153,ECOM-2078,Cart Issue,Patched mobile crash issue,Escalated,2024-11-07
+RES-3154,ECOM-2313,Delivery Delay,Fixed payment gateway configuration,Resolved,2024-11-03
+RES-3155,ECOM-2025,Delivery Delay,Restarted notification service,Escalated,2024-09-13
+RES-3156,ECOM-2182,App Crash,Optimized database query,Escalated,2024-09-18
+RES-3157,ECOM-2281,App Crash,Rolled back recent deployment,Partially Resolved,2024-10-16
+RES-3158,ECOM-2027,Cart Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-03
+RES-3159,ECOM-2467,App Crash,Fixed payment gateway configuration,Resolved,2024-10-23
+RES-3160,ECOM-2195,Cart Issue,Patched mobile crash issue,Resolved,2024-09-08
+RES-3161,ECOM-2441,App Crash,Patched mobile crash issue,Resolved,2024-10-01
+RES-3162,ECOM-2094,Cart Issue,Restarted notification service,Partially Resolved,2024-10-03
+RES-3163,ECOM-2020,App Crash,Fixed payment gateway configuration,Escalated,2024-09-10
+RES-3164,ECOM-2190,Search & Filter Issue,Hotfix released for cart module,Partially Resolved,2024-11-19
+RES-3165,ECOM-2408,App Crash,Hotfix released for cart module,Partially Resolved,2024-11-02
+RES-3166,ECOM-2271,Search & Filter Issue,Patched mobile crash issue,Resolved,2024-11-10
+RES-3167,ECOM-2245,Payment Failure,Improved error handling logic,Partially Resolved,2024-11-01
+RES-3168,ECOM-2150,Refund Issue,Fixed payment gateway configuration,Escalated,2024-09-24
+RES-3169,ECOM-2316,Payment Failure,Hotfix released for cart module,Partially Resolved,2024-09-22
+RES-3170,ECOM-2380,Payment Failure,Restarted notification service,Partially Resolved,2024-09-24
+RES-3171,ECOM-2211,Delivery Delay,Hotfix released for cart module,Resolved,2024-09-30
+RES-3172,ECOM-2145,Refund Issue,Hotfix released for cart module,Resolved,2024-11-26
+RES-3173,ECOM-2422,Cart Issue,Patched mobile crash issue,Partially Resolved,2024-11-02
+RES-3174,ECOM-2184,Search & Filter Issue,Hotfix released for cart module,Partially Resolved,2024-11-26
+RES-3175,ECOM-2192,Refund Issue,Patched mobile crash issue,Escalated,2024-10-07
+RES-3176,ECOM-2446,Payment Failure,Restarted notification service,Escalated,2024-11-07
+RES-3177,ECOM-2473,Delivery Delay,Restarted notification service,Partially Resolved,2024-09-21
+RES-3178,ECOM-2003,Cart Issue,Improved error handling logic,Escalated,2024-09-09
+RES-3179,ECOM-2056,Refund Issue,Optimized database query,Escalated,2024-11-30
+RES-3180,ECOM-2265,App Crash,Patched mobile crash issue,Partially Resolved,2024-09-09
+RES-3181,ECOM-2487,App Crash,Fixed payment gateway configuration,Resolved,2024-10-30
+RES-3182,ECOM-2095,Cart Issue,Cleared cache and session handling bug,Resolved,2024-10-15
+RES-3183,ECOM-2178,Cart Issue,Patched mobile crash issue,Resolved,2024-11-29
+RES-3184,ECOM-2315,Refund Issue,Rolled back recent deployment,Partially Resolved,2024-10-27
+RES-3185,ECOM-2471,App Crash,Optimized database query,Partially Resolved,2024-09-27
+RES-3186,ECOM-2486,App Crash,Restarted notification service,Escalated,2024-09-16
+RES-3187,ECOM-2404,Delivery Delay,Cleared cache and session handling bug,Resolved,2024-11-04
+RES-3188,ECOM-2079,Payment Failure,Cleared cache and session handling bug,Escalated,2024-11-06
+RES-3189,ECOM-2149,Cart Issue,Fixed payment gateway configuration,Escalated,2024-11-06
+RES-3190,ECOM-2365,Search & Filter Issue,Hotfix released for cart module,Escalated,2024-10-03
+RES-3191,ECOM-2058,Refund Issue,Hotfix released for cart module,Partially Resolved,2024-11-08
+RES-3192,ECOM-2097,Cart Issue,Updated third-party API integration,Escalated,2024-10-17
+RES-3193,ECOM-2477,Payment Failure,Rolled back recent deployment,Escalated,2024-11-18
+RES-3194,ECOM-2453,Cart Issue,Rolled back recent deployment,Resolved,2024-09-09
+RES-3195,ECOM-2366,Cart Issue,Patched mobile crash issue,Resolved,2024-10-25
+RES-3196,ECOM-2193,Search & Filter Issue,Cleared cache and session handling bug,Partially Resolved,2024-11-25
+RES-3197,ECOM-2321,App Crash,Fixed payment gateway configuration,Partially Resolved,2024-11-18
+RES-3198,ECOM-2214,Cart Issue,Restarted notification service,Partially Resolved,2024-09-11
+RES-3199,ECOM-2447,Payment Failure,Hotfix released for cart module,Escalated,2024-10-03
+RES-3200,ECOM-2439,Search & Filter Issue,Cleared cache and session handling bug,Partially Resolved,2024-11-01
+RES-3201,ECOM-2177,Search & Filter Issue,Cleared cache and session handling bug,Resolved,2024-10-30
+RES-3202,ECOM-2151,Cart Issue,Restarted notification service,Escalated,2024-11-23
+RES-3203,ECOM-2467,Payment Failure,Hotfix released for cart module,Partially Resolved,2024-09-19
+RES-3204,ECOM-2308,Search & Filter Issue,Updated third-party API integration,Resolved,2024-11-08
+RES-3205,ECOM-2278,Cart Issue,Hotfix released for cart module,Resolved,2024-09-13
+RES-3206,ECOM-2280,Cart Issue,Restarted notification service,Resolved,2024-11-03
+RES-3207,ECOM-2099,Search & Filter Issue,Rolled back recent deployment,Partially Resolved,2024-09-22
+RES-3208,ECOM-2137,Payment Failure,Optimized database query,Resolved,2024-11-09
+RES-3209,ECOM-2114,Refund Issue,Hotfix released for cart module,Partially Resolved,2024-09-30
+RES-3210,ECOM-2494,Refund Issue,Cleared cache and session handling bug,Resolved,2024-09-06
+RES-3211,ECOM-2113,Search & Filter Issue,Optimized database query,Partially Resolved,2024-11-01
+RES-3212,ECOM-2357,App Crash,Improved error handling logic,Resolved,2024-09-05
+RES-3213,ECOM-2250,Payment Failure,Fixed payment gateway configuration,Resolved,2024-10-13
+RES-3214,ECOM-2138,App Crash,Updated third-party API integration,Resolved,2024-11-19
+RES-3215,ECOM-2183,Payment Failure,Optimized database query,Resolved,2024-09-23
+RES-3216,ECOM-2473,Search & Filter Issue,Updated third-party API integration,Resolved,2024-09-07
+RES-3217,ECOM-2263,Cart Issue,Improved error handling logic,Resolved,2024-10-03
+RES-3218,ECOM-2371,App Crash,Updated third-party API integration,Escalated,2024-11-23
+RES-3219,ECOM-2049,Refund Issue,Restarted notification service,Partially Resolved,2024-10-09
+RES-3220,ECOM-2065,Search & Filter Issue,Hotfix released for cart module,Resolved,2024-10-08
+RES-3221,ECOM-2379,App Crash,Improved error handling logic,Resolved,2024-10-01
+RES-3222,ECOM-2129,Cart Issue,Restarted notification service,Resolved,2024-10-10
+RES-3223,ECOM-2376,Delivery Delay,Cleared cache and session handling bug,Resolved,2024-09-14
+RES-3224,ECOM-2270,Payment Failure,Patched mobile crash issue,Resolved,2024-10-05
+RES-3225,ECOM-2484,Cart Issue,Patched mobile crash issue,Partially Resolved,2024-10-05
+RES-3226,ECOM-2139,Refund Issue,Cleared cache and session handling bug,Resolved,2024-11-14
+RES-3227,ECOM-2149,Refund Issue,Restarted notification service,Escalated,2024-11-01
+RES-3228,ECOM-2324,Search & Filter Issue,Updated third-party API integration,Resolved,2024-11-09
+RES-3229,ECOM-2485,Cart Issue,Restarted notification service,Partially Resolved,2024-11-10
+RES-3230,ECOM-2452,Search & Filter Issue,Updated third-party API integration,Resolved,2024-10-19
+RES-3231,ECOM-2312,Delivery Delay,Rolled back recent deployment,Partially Resolved,2024-11-22
+RES-3232,ECOM-2046,Delivery Delay,Improved error handling logic,Partially Resolved,2024-09-12
+RES-3233,ECOM-2069,Payment Failure,Cleared cache and session handling bug,Resolved,2024-09-05
+RES-3234,ECOM-2264,Cart Issue,Cleared cache and session handling bug,Resolved,2024-11-08
+RES-3235,ECOM-2386,Cart Issue,Improved error handling logic,Escalated,2024-11-13
+RES-3236,ECOM-2134,Delivery Delay,Patched mobile crash issue,Escalated,2024-10-19
+RES-3237,ECOM-2026,Payment Failure,Hotfix released for cart module,Resolved,2024-11-07
+RES-3238,ECOM-2359,Search & Filter Issue,Hotfix released for cart module,Escalated,2024-09-30
+RES-3239,ECOM-2127,App Crash,Patched mobile crash issue,Resolved,2024-11-28
+RES-3240,ECOM-2202,Delivery Delay,Fixed payment gateway configuration,Escalated,2024-11-04
+RES-3241,ECOM-2133,Refund Issue,Fixed payment gateway configuration,Resolved,2024-09-09
+RES-3242,ECOM-2191,Refund Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-27
+RES-3243,ECOM-2050,App Crash,Optimized database query,Resolved,2024-11-10
+RES-3244,ECOM-2335,Search & Filter Issue,Hotfix released for cart module,Escalated,2024-09-20
+RES-3245,ECOM-2009,Payment Failure,Updated third-party API integration,Resolved,2024-11-20
+RES-3246,ECOM-2137,App Crash,Patched mobile crash issue,Escalated,2024-10-18
+RES-3247,ECOM-2035,App Crash,Fixed payment gateway configuration,Resolved,2024-10-14
+RES-3248,ECOM-2069,App Crash,Hotfix released for cart module,Escalated,2024-11-05
+RES-3249,ECOM-2318,Payment Failure,Rolled back recent deployment,Escalated,2024-09-20
+RES-3250,ECOM-2359,Payment Failure,Improved error handling logic,Resolved,2024-11-19
+RES-3251,ECOM-2326,Delivery Delay,Fixed payment gateway configuration,Resolved,2024-10-04
+RES-3252,ECOM-2372,Delivery Delay,Fixed payment gateway configuration,Escalated,2024-09-18
+RES-3253,ECOM-2015,Payment Failure,Patched mobile crash issue,Resolved,2024-11-07
+RES-3254,ECOM-2336,Payment Failure,Restarted notification service,Partially Resolved,2024-09-21
+RES-3255,ECOM-2328,Search & Filter Issue,Rolled back recent deployment,Partially Resolved,2024-09-20
+RES-3256,ECOM-2007,Payment Failure,Rolled back recent deployment,Resolved,2024-10-21
+RES-3257,ECOM-2404,App Crash,Rolled back recent deployment,Escalated,2024-11-20
+RES-3258,ECOM-2106,Refund Issue,Patched mobile crash issue,Partially Resolved,2024-11-15
+RES-3259,ECOM-2360,App Crash,Restarted notification service,Escalated,2024-11-04
+RES-3260,ECOM-2120,Search & Filter Issue,Cleared cache and session handling bug,Resolved,2024-10-25
+RES-3261,ECOM-2384,App Crash,Hotfix released for cart module,Resolved,2024-09-07
+RES-3262,ECOM-2389,Delivery Delay,Restarted notification service,Resolved,2024-10-13
+RES-3263,ECOM-2303,Delivery Delay,Optimized database query,Partially Resolved,2024-11-04
+RES-3264,ECOM-2035,Search & Filter Issue,Optimized database query,Partially Resolved,2024-09-26
+RES-3265,ECOM-2099,Refund Issue,Cleared cache and session handling bug,Partially Resolved,2024-10-31
+RES-3266,ECOM-2292,App Crash,Rolled back recent deployment,Escalated,2024-10-25
+RES-3267,ECOM-2450,Payment Failure,Rolled back recent deployment,Partially Resolved,2024-09-27
+RES-3268,ECOM-2446,Refund Issue,Fixed payment gateway configuration,Escalated,2024-10-18
+RES-3269,ECOM-2300,Cart Issue,Optimized database query,Partially Resolved,2024-10-17
+RES-3270,ECOM-2362,Cart Issue,Updated third-party API integration,Partially Resolved,2024-10-23
+RES-3271,ECOM-2117,Delivery Delay,Optimized database query,Partially Resolved,2024-09-18
+RES-3272,ECOM-2153,Delivery Delay,Improved error handling logic,Escalated,2024-10-13
+RES-3273,ECOM-2126,Delivery Delay,Hotfix released for cart module,Partially Resolved,2024-11-04
+RES-3274,ECOM-2096,Cart Issue,Cleared cache and session handling bug,Partially Resolved,2024-09-22
+RES-3275,ECOM-2146,Refund Issue,Cleared cache and session handling bug,Resolved,2024-10-06
+RES-3276,ECOM-2375,Delivery Delay,Updated third-party API integration,Resolved,2024-09-30
+RES-3277,ECOM-2014,Delivery Delay,Rolled back recent deployment,Resolved,2024-09-26
+RES-3278,ECOM-2164,App Crash,Patched mobile crash issue,Partially Resolved,2024-11-18
+RES-3279,ECOM-2205,Search & Filter Issue,Hotfix released for cart module,Resolved,2024-11-30
+RES-3280,ECOM-2275,Cart Issue,Improved error handling logic,Partially Resolved,2024-11-27
+RES-3281,ECOM-2001,Cart Issue,Improved error handling logic,Partially Resolved,2024-10-25
+RES-3282,ECOM-2487,Refund Issue,Updated third-party API integration,Escalated,2024-09-11
+RES-3283,ECOM-2158,Search & Filter Issue,Fixed payment gateway configuration,Escalated,2024-10-09
+RES-3284,ECOM-2289,Search & Filter Issue,Patched mobile crash issue,Escalated,2024-10-10
+RES-3285,ECOM-2469,Refund Issue,Patched mobile crash issue,Partially Resolved,2024-10-16
+RES-3286,ECOM-2338,App Crash,Cleared cache and session handling bug,Partially Resolved,2024-09-15
+RES-3287,ECOM-2321,Refund Issue,Fixed payment gateway configuration,Partially Resolved,2024-11-15
+RES-3288,ECOM-2485,Payment Failure,Cleared cache and session handling bug,Escalated,2024-11-18
+RES-3289,ECOM-2081,Delivery Delay,Cleared cache and session handling bug,Partially Resolved,2024-09-12
+RES-3290,ECOM-2463,Search & Filter Issue,Improved error handling logic,Escalated,2024-11-23
+RES-3291,ECOM-2152,Delivery Delay,Fixed payment gateway configuration,Resolved,2024-09-15
+RES-3292,ECOM-2396,Delivery Delay,Updated third-party API integration,Escalated,2024-09-16
+RES-3293,ECOM-2273,Delivery Delay,Improved error handling logic,Resolved,2024-10-15
+RES-3294,ECOM-2290,Payment Failure,Restarted notification service,Partially Resolved,2024-09-10
+RES-3295,ECOM-2215,Payment Failure,Restarted notification service,Escalated,2024-09-19
+RES-3296,ECOM-2246,Cart Issue,Hotfix released for cart module,Escalated,2024-09-20
+RES-3297,ECOM-2195,App Crash,Fixed payment gateway configuration,Partially Resolved,2024-11-30
+RES-3298,ECOM-2166,Refund Issue,Rolled back recent deployment,Partially Resolved,2024-09-22
+RES-3299,ECOM-2214,Search & Filter Issue,Hotfix released for cart module,Escalated,2024-10-04
+RES-3300,ECOM-2053,Refund Issue,Updated third-party API integration,Partially Resolved,2024-09-06

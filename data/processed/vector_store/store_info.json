@@ -1,0 +1,8 @@
+{
+  "vector_store_type": "FAISS",
+  "index_file": "data\\processed\\vector_store\\faiss_index.bin",
+  "documents_file": "data\\processed\\vector_store\\documents.json",
+  "embedding_model": "all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "total_documents": null
+}
