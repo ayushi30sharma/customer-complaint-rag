@@ -13,5 +13,5 @@ and identify recurring issues and product-impact changes after releases.
 - LangChain
 - FAISS
 - Sentence Transformers
-- Mistral (via Ollama)
+- llama3.2 latest (via Ollama)
 - Streamlit / FastAPI
