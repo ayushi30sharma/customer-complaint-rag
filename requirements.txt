@@ -1,11 +1,9 @@
-pandas
-numpy
+streamlit
 langchain
 langchain-community
 sentence-transformers
 faiss-cpu
-ollama
-streamlit
-fastapi
-uvicorn
-python-dotenv
+transformers
+torch
+pandas
+numpy
