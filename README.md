@@ -1,3 +1,14 @@
+title: Customer Complaint Root-Cause Analyzer
+emoji: 📊
+colorFrom: blue
+colorTo: purple
+sdk: streamlit
+sdk_version: 1.32.0
+app_file: app.py
+pinned: false
+
+
+
 # Customer Complaint Root-Cause Analyzer (RAG)
 
 This project uses Retrieval-Augmented Generation (RAG) to analyze customer complaints
