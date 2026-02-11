@@ -1,7 +1,8 @@
 import json
 import os
 from rag.retriever import ComplaintRetriever
-from rag.llm import OllamaLLM
+from rag.llm import HuggingFaceLLM
+
 
 # ============================================
 # RAG PIPELINE CLASS
@@ -31,7 +32,8 @@ class RAGPipeline:
         
         # Load LLM
         print("\n[2/2] Loading LLM...")
-        self.llm = OllamaLLM()
+        self.llm = HuggingFaceLLM()
+
         
         print("\n" + "="*60)
         print("✅ RAG PIPELINE READY!")
@@ -79,11 +81,10 @@ class RAGPipeline:
             print(f"\n🤖 Generating answer using LLM...")
         
         answer = self.llm.generate_with_context(
-            query=user_query,
-            context=context,
-            max_tokens=max_tokens,
-            temperature=temperature
-        )
+    query=user_query,
+    context=context
+)
+
         
         if verbose:
             print("\n" + "="*60)
@@ -102,3 +103,18 @@ class RAGPipeline:
         }
         
         return response
+# ============================================
+# STREAMLIT WRAPPER FUNCTION
+# ============================================
+
+_pipeline_instance = None
+
+def run_pipeline(query):
+    global _pipeline_instance
+
+    if _pipeline_instance is None:
+        _pipeline_instance = RAGPipeline().load()
+
+    result = _pipeline_instance.query(query, verbose=False)
+    return result["answer"]
+    
