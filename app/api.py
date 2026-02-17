@@ -52,7 +52,7 @@ class QueryRequest(BaseModel):
     class Config:
         json_schema_extra = {
             "example": {
-                "query": "How do you handle damaged products?",
+                "query": "Why does the app crash when placing orders?",
                 "top_k": 5,
                 "max_tokens": 500,
                 "temperature": 0.7
@@ -166,7 +166,7 @@ async def query_endpoint(request: QueryRequest):
         formatted_sources = [
             {
                 "id": src.get('id', 'unknown'),
-                "text": src.get('text', '')[:200] + '...',  # Truncate long text
+                "text": src.get('text', '')[:200] + '...' if len(src.get('text', '')) > 200 else src.get('text', ''),
                 "source": src.get('source', 'unknown'),
                 "score": src.get('score')
             }

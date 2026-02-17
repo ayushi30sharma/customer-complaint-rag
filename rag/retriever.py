@@ -1,5 +1,10 @@
-import json
+import sys
 import os
+
+# Add parent directory to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import json
 import pickle
 import numpy as np
 import faiss
@@ -38,14 +43,20 @@ class ComplaintRetriever:
         
         # Load FAISS index
         if not os.path.exists(FAISS_INDEX_FILE):
-            raise FileNotFoundError(f"FAISS index not found: {FAISS_INDEX_FILE}")
+            raise FileNotFoundError(
+                f"FAISS index not found: {FAISS_INDEX_FILE}\n"
+                f"Please run: python rag/create_vector_store.py"
+            )
         
         self.index = faiss.read_index(FAISS_INDEX_FILE)
         print(f"✅ Loaded FAISS index with {self.index.ntotal} vectors")
         
         # Load documents
         if not os.path.exists(DOCUMENTS_FILE):
-            raise FileNotFoundError(f"Documents not found: {DOCUMENTS_FILE}")
+            raise FileNotFoundError(
+                f"Documents not found: {DOCUMENTS_FILE}\n"
+                f"Please run: python rag/create_vector_store.py"
+            )
         
         with open(DOCUMENTS_FILE, 'r', encoding='utf-8') as f:
             self.documents = json.load(f)
@@ -53,8 +64,12 @@ class ComplaintRetriever:
         
         # Load embedding model
         print(f"🤖 Loading embedding model: {EMBEDDING_MODEL}...")
-        self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
-        print(f"✅ Embedding model loaded")
+        try:
+            self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
+            print(f"✅ Embedding model loaded")
+        except Exception as e:
+            print(f"❌ Error loading embedding model: {e}")
+            raise
         
         return self
     
@@ -81,6 +96,9 @@ class ComplaintRetriever:
         if self.index is None or self.documents is None:
             raise RuntimeError("Retriever not loaded. Call load() first.")
         
+        # Ensure top_k doesn't exceed available documents
+        top_k = min(top_k, len(self.documents))
+        
         # Embed query
         query_embedding = self.embed_query(query)
         
@@ -90,6 +108,10 @@ class ComplaintRetriever:
         # Prepare results
         results = []
         for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
+            # Ensure index is within bounds
+            if idx >= len(self.documents):
+                continue
+                
             doc = self.documents[idx].copy()
             
             if return_scores:
@@ -135,12 +157,13 @@ def display_results(query, results):
     
     for i, doc in enumerate(results, 1):
         print(f"\n[Result {i}]")
-        print(f"ID: {doc['id']}")
-        print(f"Source: {doc['source']}")
+        print(f"ID: {doc.get('id', 'N/A')}")
+        print(f"Source: {doc.get('source', 'N/A')}")
         if 'score' in doc:
             print(f"Score: {doc['score']:.4f}")
             print(f"Distance: {doc['distance']:.4f}")
-        print(f"Text: {doc['text'][:200]}...")
+        text = doc.get('text', '')
+        print(f"Text: {text[:200]}...")
         print("-" * 60)
 
 # ============================================
@@ -154,16 +177,23 @@ def test_retriever():
     print("="*60)
     
     # Initialize and load retriever
-    retriever = ComplaintRetriever()
-    retriever.load()
+    try:
+        retriever = ComplaintRetriever()
+        retriever.load()
+    except FileNotFoundError as e:
+        print(f"\n❌ Error: {e}")
+        return
+    except Exception as e:
+        print(f"\n❌ Unexpected error: {e}")
+        return
     
-    # Test queries
+    # Test queries based on your actual data
     test_queries = [
-        "Product arrived damaged",
-        "Late delivery issue",
-        "Wrong item received",
-        "Refund not processed",
-        "Customer service problem"
+        "Why does the app crash when placing orders?",
+        "Items disappearing from cart",
+        "Refund problems",
+        "App performance issues",
+        "Order cancellation"
     ]
     
     print("\n" + "="*60)
@@ -172,21 +202,27 @@ def test_retriever():
     
     for query in test_queries:
         print(f"\n🔍 Testing query: '{query}'")
-        results = retriever.retrieve(query, top_k=3)
-        display_results(query, results)
+        try:
+            results = retriever.retrieve(query, top_k=3)
+            display_results(query, results)
+        except Exception as e:
+            print(f"❌ Error retrieving results: {e}")
     
     # Test context retrieval
     print("\n" + "="*60)
     print("TEST CONTEXT RETRIEVAL")
     print("="*60)
     
-    test_query = "Product quality complaint"
-    context, results = retriever.retrieve_with_context(test_query, top_k=3)
-    
-    print(f"\nQuery: {test_query}")
-    print("\nFormatted Context for LLM:")
-    print("-" * 60)
-    print(context[:500] + "..." if len(context) > 500 else context)
+    test_query = "App crashes during checkout"
+    try:
+        context, results = retriever.retrieve_with_context(test_query, top_k=3)
+        
+        print(f"\nQuery: {test_query}")
+        print("\nFormatted Context for LLM:")
+        print("-" * 60)
+        print(context[:500] + "..." if len(context) > 500 else context)
+    except Exception as e:
+        print(f"❌ Error: {e}")
     
     print("\n✅ Retriever test complete!")
 

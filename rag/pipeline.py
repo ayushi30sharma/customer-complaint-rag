@@ -1,8 +1,7 @@
 import json
 import os
 from rag.retriever import ComplaintRetriever
-from rag.llm import HuggingFaceLLM
-
+from rag.llm import OllamaLLM
 
 # ============================================
 # RAG PIPELINE CLASS
@@ -32,8 +31,7 @@ class RAGPipeline:
         
         # Load LLM
         print("\n[2/2] Loading LLM...")
-        self.llm = HuggingFaceLLM()
-
+        self.llm = OllamaLLM()
         
         print("\n" + "="*60)
         print("✅ RAG PIPELINE READY!")
@@ -81,10 +79,11 @@ class RAGPipeline:
             print(f"\n🤖 Generating answer using LLM...")
         
         answer = self.llm.generate_with_context(
-    query=user_query,
-    context=context
-)
-
+            query=user_query,
+            context=context,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
         
         if verbose:
             print("\n" + "="*60)
@@ -103,6 +102,46 @@ class RAGPipeline:
         }
         
         return response
+
+# ============================================
+# TEST RAG PIPELINE
+# ============================================
+
+def test_rag_pipeline():
+    """Test the complete RAG pipeline"""
+    print("="*60)
+    print("  TESTING COMPLETE RAG PIPELINE")
+    print("="*60)
+    
+    # Initialize pipeline
+    pipeline = RAGPipeline()
+    pipeline.load()
+    
+    # Test queries
+    test_queries = [
+        "Why does the app crash when placing orders?",
+        "Items disappearing from cart",
+        "How do I get a refund?"
+    ]
+    
+    print("\n" + "="*60)
+    print("RUNNING TEST QUERIES")
+    print("="*60)
+    
+    for i, query in enumerate(test_queries, 1):
+        print(f"\n{'='*60}")
+        print(f"TEST QUERY {i}/{len(test_queries)}")
+        print(f"{'='*60}")
+        
+        response = pipeline.query(query, top_k=3, verbose=True)
+        
+        # Add some spacing
+        print("\n")
+    
+    print("="*60)
+    print("✅ RAG PIPELINE TEST COMPLETE!")
+    print("="*60)
+
 # ============================================
 # STREAMLIT WRAPPER FUNCTION
 # ============================================
@@ -110,6 +149,10 @@ class RAGPipeline:
 _pipeline_instance = None
 
 def run_pipeline(query):
+    """
+    Wrapper function for Streamlit
+    Maintains a single pipeline instance
+    """
     global _pipeline_instance
 
     if _pipeline_instance is None:
@@ -117,4 +160,14 @@ def run_pipeline(query):
 
     result = _pipeline_instance.query(query, verbose=False)
     return result["answer"]
-    
+
+# ============================================
+# MAIN
+# ============================================
+
+def main():
+    """Main function"""
+    test_rag_pipeline()
+
+if __name__ == "__main__":
+    main()

@@ -1,120 +1,176 @@
-from transformers import pipeline
+import requests
+import json
+from typing import Optional
 
 # ============================================
 # CONFIGURATION
 # ============================================
 
-DEFAULT_MODEL = "google/flan-t5-base"
+OLLAMA_BASE_URL = "http://localhost:11434"
+DEFAULT_MODEL = "llama3.2:latest"
 
 # ============================================
 # LLM CLASS
 # ============================================
 
-class HuggingFaceLLM:
+class OllamaLLM:
     """
-    Lightweight Hugging Face LLM wrapper
-    Compatible with free CPU deployment (Hugging Face Spaces)
+    Wrapper for Ollama LLM (LLaMA/Mistral)
+    Designed for analytical RAG-style responses
     """
-
-    def __init__(self, model_name: str = DEFAULT_MODEL):
-        """
-        Initialize Hugging Face LLM
-
-        Args:
-            model_name (str): Hugging Face model name
-        """
-        print(f"🔌 Loading Hugging Face model: {model_name}...")
+    
+    def __init__(self, model_name=DEFAULT_MODEL, base_url=OLLAMA_BASE_URL):
         self.model_name = model_name
+        self.base_url = base_url
+        self.api_url = f"{base_url}/api/generate"
+        self._verify_connection()
+    
+    # ----------------------------------------
+    # Verify Ollama Connection
+    # ----------------------------------------
 
-        self.llm = pipeline(
-            task="text-generation",
-            model=model_name,
-            max_new_tokens=256
-        )
+    def _verify_connection(self):
+        print(f"🔌 Connecting to Ollama at {self.base_url}...")
+        
+        try:
+            response = requests.get(f"{self.base_url}/api/tags", timeout=5)
+            response.raise_for_status()
+            
+            models = response.json().get('models', [])
+            model_names = [m['name'] for m in models]
+            
+            if self.model_name not in model_names:
+                print(f"⚠️  Model '{self.model_name}' not found!")
+                print(f"Available models: {model_names}")
+                print(f"\nRun this to install:")
+                print(f"ollama pull {self.model_name}")
+                raise ValueError(f"Model {self.model_name} not available")
+            
+            print(f"✅ Connected to Ollama")
+            print(f"✅ Model '{self.model_name}' is ready")
+            
+        except requests.exceptions.ConnectionError:
+            print(f"❌ Cannot connect to Ollama at {self.base_url}")
+            print("Make sure Ollama is running using: ollama serve")
+            raise
 
-        print("✅ Hugging Face LLM loaded successfully")
+    # ----------------------------------------
+    # Basic Generation
+    # ----------------------------------------
 
-    def generate(self, prompt: str):
+    def generate(self, prompt, max_tokens=500, temperature=0.2, stream=False):
+        payload = {
+            "model": self.model_name,
+            "prompt": prompt,
+            "stream": stream,
+            "options": {
+                "num_predict": max_tokens,
+                "temperature": temperature
+            }
+        }
+        
+        try:
+            response = requests.post(
+                self.api_url,
+                json=payload,
+                timeout=90
+            )
+            response.raise_for_status()
+            
+            if stream:
+                full_response = ""
+                for line in response.iter_lines():
+                    if line:
+                        chunk = json.loads(line)
+                        if 'response' in chunk:
+                            full_response += chunk['response']
+                            print(chunk['response'], end='', flush=True)
+                print()
+                return full_response
+            else:
+                result = response.json()
+                return result.get("response", "").strip()
+                
+        except requests.exceptions.RequestException as e:
+            print(f"❌ Error generating response: {e}")
+            return "Error generating response from LLM."
+
+    # ----------------------------------------
+    # RAG Analytical Generation
+    # ----------------------------------------
+
+    def generate_with_context(self, query, context, max_tokens=600, temperature=0.2):
         """
-        Generate response from LLM
-
-        Args:
-            prompt (str): Input prompt
-
-        Returns:
-            str: Generated response
+        Generate structured analytical response using retrieved complaint context
         """
-        result = self.llm(prompt)
-        return result[0]["generated_text"]
 
-    def generate_with_context(self, query: str, context: str):
-        """
-        Generate response using retrieved context (RAG)
-
-        Args:
-            query (str): User query
-            context (str): Retrieved context
-
-        Returns:
-            str: Generated answer
-        """
         prompt = f"""
-You are a senior customer support analyst.
+You are a senior product analyst analyzing structured customer complaint data.
 
-Use ONLY the information provided in the context below.
-Identify patterns, root causes, and trends if applicable.
-If the context does not contain enough information, say so clearly.
+Your responsibilities:
+- Identify clear issue patterns.
+- Infer realistic root causes based ONLY on the complaint data.
+- Highlight affected platforms, versions, or features if mentioned.
+- Provide actionable product or engineering recommendations.
 
-Context:
+STRICT RULES:
+- Use ONLY the complaint data below.
+- Do NOT suggest contacting support.
+- Do NOT provide generic customer service responses.
+- Do NOT hallucinate information.
+- If data is limited, clearly state limitations but still summarize visible patterns.
+
+Complaint Data:
 {context}
 
-Question:
+User Question:
 {query}
 
-Answer in a clear, professional, and structured manner.
+Respond in the following structured format:
+
+1. Issue Summary:
+2. Observed Patterns:
+3. Possible Root Causes:
+4. Recommended Actions:
+5. Confidence Level (Low/Medium/High):
 """
 
-        return self.generate(prompt)
+        return self.generate(prompt, max_tokens=max_tokens, temperature=temperature)
 
 
 # ============================================
-# TEST LLM
+# MAIN TEST
 # ============================================
 
-def test_llm():
-    """Test the Hugging Face LLM"""
-    print("=" * 60)
-    print("  TESTING HUGGING FACE LLM")
-    print("=" * 60)
+def main():
+    print("="*60)
+    print("TESTING UPDATED OLLAMA LLM")
+    print("="*60)
 
-    llm = HuggingFaceLLM()
-
-    # Test 1: Simple generation
-    print("\nTEST 1: SIMPLE GENERATION")
-    prompt = "What is customer service? Answer in 2 sentences."
-    print("\nResponse:")
-    print(llm.generate(prompt))
-
-    # Test 2: RAG-style generation
-    print("\nTEST 2: RAG-STYLE GENERATION")
+    try:
+        llm = OllamaLLM()
+    except Exception as e:
+        print(f"Failed to initialize LLM: {e}")
+        return
 
     sample_context = """
-Customer complained about damaged product during shipping.
-Resolution: Full refund issued and replacement sent.
-Another complaint mentioned poor packaging quality.
+Complaint 1:
+User reports payment failure after entering card details on v2.0 (iOS).
+---
+Complaint 2:
+Multiple users facing payment timeout issue on Web platform (v3.0).
+---
+Complaint 3:
+Checkout error during payment authorization stage.
+---
 """
 
-    query = "What is the root cause of these complaints?"
+    query = "Why are payments failing?"
 
-    print("\nResponse:")
-    print(llm.generate_with_context(query, sample_context))
+    print("\nGenerated Response:\n")
+    response = llm.generate_with_context(query, sample_context)
+    print(response)
 
-    print("\n✅ LLM test complete!")
-
-
-# ============================================
-# MAIN
-# ============================================
 
 if __name__ == "__main__":
-    test_llm()
+    main()
